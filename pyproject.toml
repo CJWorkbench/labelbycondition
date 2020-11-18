@@ -12,7 +12,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "~=3.8"
-cjwmodule = "~=3.0"
+cjwmodule = "~=3.1"
 pyarrow = "~=2.0"
 
 [tool.poetry.dev-dependencies]

@@ -1,10 +1,9 @@
-import re
 from typing import Any, Dict, List, Tuple
 
 import numpy as np
 import pyarrow as pa
 from cjwmodule import i18n
-from cjwmodule.arrow.condition import condition_to_mask
+from cjwmodule.arrow.condition import ConditionError, condition_to_mask
 from cjwmodule.util.colnames import gen_unique_clean_colnames_and_warn
 
 __all__ = ["render"]
@@ -27,13 +26,16 @@ def _generate_label_column(
 
         try:
             mask = condition_to_mask(arrow_table, condition)
-        except re.error as err:
-            errors.append(
-                i18n.trans(
-                    "error.invalidRegex",
-                    "Invalid regular expression “{pattern}”: {message}",
-                    {"value": err.pattern, "message": err.msg},
-                )
+        except ConditionError as err:
+            errors.extend(
+                [
+                    i18n.trans(
+                        "error.invalidRegex",
+                        "Invalid regular expression “{pattern}”: {message}",
+                        {"value": e.pattern, "message": e.msg},
+                    )
+                    for e in err.errors
+                ]
             )
             continue
 

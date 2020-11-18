@@ -7,7 +7,7 @@ description: "Create a column of labels for rows that match conditions."
 parameters:
 - id_name: colname
   type: string
-  name: Create column with name
+  name: Output column
 - id_name: labels
   type: list
   child_parameters:

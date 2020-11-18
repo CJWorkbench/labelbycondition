@@ -136,11 +136,23 @@ def test_regex_errors():
                 {
                     "value": "a",
                     "condition": dict(
-                        operation="text_is",
-                        column="A",
-                        value="*",
-                        isCaseSensitive=False,
-                        isRegex=True,
+                        operation="or",
+                        conditions=[
+                            dict(
+                                operation="text_is",
+                                column="A",
+                                value="*",
+                                isCaseSensitive=False,
+                                isRegex=True,
+                            ),
+                            dict(
+                                operation="text_is",
+                                column="A",
+                                value="+",
+                                isCaseSensitive=False,
+                                isRegex=True,
+                            ),
+                        ],
                     ),
                 },
                 {
@@ -148,7 +160,7 @@ def test_regex_errors():
                     "condition": dict(
                         operation="text_is",
                         column="A",
-                        value="+",
+                        value="[",
                         isCaseSensitive=False,
                         isRegex=True,
                     ),
@@ -164,6 +176,10 @@ def test_regex_errors():
             i18n_message(
                 "error.invalidRegex",
                 {"value": "+", "message": "no argument for repetition operator: +"},
+            ),
+            i18n_message(
+                "error.invalidRegex",
+                {"value": "[", "message": "missing ]: ["},
             ),
         ],
     )

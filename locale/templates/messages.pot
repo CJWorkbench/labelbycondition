@@ -6,7 +6,7 @@ msgstr ""
 msgid "_spec.description"
 msgstr ""
 
-#. default-message: Create column with name
+#. default-message: Output column
 msgid "_spec.parameters.colname.name"
 msgstr ""
 
