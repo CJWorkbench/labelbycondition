@@ -1,0 +1,21 @@
+#. default-message: Label by condition
+msgid "_spec.name"
+msgstr ""
+
+#. default-message: Create a column of labels for rows that match conditions.
+msgid "_spec.description"
+msgstr ""
+
+#. default-message: Create column with name
+msgid "_spec.parameters.colname.name"
+msgstr ""
+
+#. default-message: Label
+msgid "_spec.parameters.labels.child_parameters.value.name"
+msgstr ""
+
+#. default-message: Invalid regular expression “{pattern}”: {message}
+#: labelbycondition.py:32
+msgid "error.invalidRegex"
+msgstr ""
+

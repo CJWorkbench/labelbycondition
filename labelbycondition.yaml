@@ -1,0 +1,18 @@
+name: Label by condition
+id_name: labelbycondition
+category: Analyze
+icon: edit
+help_url: modules/analyse/labelbycondition
+description: "Create a column of labels for rows that match conditions."
+parameters:
+- id_name: colname
+  type: string
+  name: Create column with name
+- id_name: labels
+  type: list
+  child_parameters:
+  - id_name: value
+    name: Label
+    type: string
+  - id_name: condition
+    type: condition

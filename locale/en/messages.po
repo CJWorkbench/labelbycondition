@@ -1,0 +1,37 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-11-18 16:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+msgid "_spec.name"
+msgstr "Label by condition"
+
+msgid "_spec.description"
+msgstr "Create a column of labels for rows that match conditions."
+
+msgid "_spec.parameters.colname.name"
+msgstr "Create column with name"
+
+msgid "_spec.parameters.labels.child_parameters.value.name"
+msgstr "Label"
+
+#: labelbycondition.py:32
+msgid "error.invalidRegex"
+msgstr "Invalid regular expression “{pattern}”: {message}"
+
